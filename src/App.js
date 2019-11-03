@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Todo from "./components/Todo";
+import TodoInput from "./components/TodoInput";
 
 function App() {
   const [todos, setTodo] = useState([
@@ -15,8 +16,14 @@ function App() {
     }
   ]);
 
+  const addTodo = text => {
+    const newTodos = [...todos, { text }];
+    setTodo(newTodos);
+  };
+
   return (
     <div>
+      <TodoInput addTodo={addTodo} />
       {todos.map((todo, index) => (
         <Todo key={index} index={index} todo={todo}></Todo>
       ))}
