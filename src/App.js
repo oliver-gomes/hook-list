@@ -21,11 +21,23 @@ function App() {
     setTodo(newTodos);
   };
 
+  const completeTodo = index => {
+    const newTodos = [...todos];
+    newTodos[index].onCompleted = true;
+
+    setTodo(newTodos);
+  };
+
   return (
     <div>
       <TodoInput addTodo={addTodo} />
       {todos.map((todo, index) => (
-        <Todo key={index} index={index} todo={todo}></Todo>
+        <Todo
+          key={index}
+          index={index}
+          todo={todo}
+          completeTodo={completeTodo}
+        ></Todo>
       ))}
     </div>
   );
