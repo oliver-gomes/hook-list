@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
 import Todo from "./components/Todo";
 import TodoInput from "./components/TodoInput";
@@ -28,15 +28,23 @@ function App() {
     setTodo(newTodos);
   };
 
+  const removeTodo = index => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+
+    setTodo(newTodos);
+  };
   return (
-    <div>
-      <TodoInput addTodo={addTodo} />
+    <div className="main-box">
+      <h1>React Hook To Do Lost</h1>
+      <TodoInput addTodo={addTodo} className="input-box" />
       {todos.map((todo, index) => (
         <Todo
           key={index}
           index={index}
           todo={todo}
           completeTodo={completeTodo}
+          removeTodo={removeTodo}
         ></Todo>
       ))}
     </div>

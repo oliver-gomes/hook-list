@@ -14,13 +14,16 @@ export default function TodoInput({ addTodo }) {
   };
   return (
     <form action="" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Enter Todo"
-        className="input"
-        value={value}
-        onChange={e => setValue(e.target.value)}
-      />
+      <div className="input-container">
+        <input
+          type="text"
+          placeholder="Enter Todo"
+          className="input effect-1"
+          value={value}
+          onChange={e => setValue(e.target.value)}
+        />
+        <span class="focus-border"></span>
+      </div>
     </form>
   );
 }

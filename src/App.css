@@ -1,22 +1,66 @@
-.App {
+* {
+  box-sizing: border-box;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+html {
+  background-color: #f06292;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 600px;
+  min-height: 600px;
+  background-color: #3b424a;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px 40px;
+  margin: 50px auto;
 }
 
-.App-link {
-  color: #09d3ac;
+.input-box {
+  text-align: center;
+  margin: 0 auto;
 }
+.todo {
+  padding: 10px 20px;
+}
+
+/* Button */
+
+/* input style :focus {
+  outline: none;
+}
+
+.input-container {
+  width: 27.33%;
+  margin: 42px 5%;
+  position: relative;
+}
+
+input[type="text"] {
+  font: 15px/24px "Lato", Arial, sans-serif;
+  color: #f06292;
+  width: 70%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  background-color: rgb(19, 23, 44);
+  border: none;
+}
+
+.effect-1 ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f06292;
+  margin-left: 23px;
+  transition: 0.4s;
+}
+
+.effect-1:focus ~ .focus-border {
+  width: 70%;
+  transition: 0.4s;
+} */
